@@ -10,9 +10,9 @@ class ExecConfig:
     return info == self.info[0].ljust(0x40, '\0') + self.info[1].ljust(0x40, '\0') + self.info[2].ljust(0x80, '\0')
 
 configs = [
-  ExecConfig(('SecureROM for s5l8940xsi, Copyright 2010, Apple Inc.',   'RELEASE',     'iBoot-838.3'),          aes_crypto_cmd=0xfeedface),
-  ExecConfig(('SecureROM for s5l8942xsi, Copyright 2011, Apple Inc.',   'RELEASE',     'rom'),          aes_crypto_cmd=0xfeedface),
-  ExecConfig(('SecureROM for s5l8945xsi, Copyright 2010, Apple Inc.',   'RELEASE',     'iBoot-1062.2'),          aes_crypto_cmd=0xfeedface),
+  ExecConfig(('SecureROM for s5l8940xsi, Copyright 2010, Apple Inc.',   'RELEASE',     'iBoot-838.3'),           aes_crypto_cmd=0x6F20+1),
+  ExecConfig(('SecureROM for s5l8942xsi, Copyright 2011, Apple Inc.',   'RELEASE',     'rom'),                   aes_crypto_cmd=0x7300+1),
+  ExecConfig(('SecureROM for s5l8945xsi, Copyright 2010, Apple Inc.',   'RELEASE',     'iBoot-1062.2'),          aes_crypto_cmd=0x7000+1),
   ExecConfig(('SecureROM for s5l8947xsi, Copyright 2011, Apple Inc.',   'RELEASE',     'iBoot-1458.2'),          aes_crypto_cmd=0x7060+1),
   ExecConfig(('SecureROM for s5l8950xsi, Copyright 2011, Apple Inc.',   'RELEASE',     'iBoot-1145.3'),          aes_crypto_cmd=0x7300+1),
   ExecConfig(('SecureROM for s5l8955xsi, Copyright 2011, Apple Inc.',   'RELEASE',     'iBoot-1145.3.3'),        aes_crypto_cmd=0x7340+1),
